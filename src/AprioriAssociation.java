@@ -13,6 +13,7 @@ public class AprioriAssociation {
 		BufferedReader bReader = new BufferedReader(new FileReader("C:\\Program Files\\Weka-3-7\\data\\weather.arff"));
 		
 		Instances instances = new Instances(bReader);
+		bReader.close();
 		instances.deleteAttributeType(0);
 		boolean isNumericAttributePresent = instances.checkForAttributeType(0);
 		
