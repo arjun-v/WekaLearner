@@ -16,12 +16,12 @@ public class BaysianClassifier {
 		
 		Instances train = new Instances(bReader);
 		train.setClassIndex(train.numAttributes() - 1);
-		
+				
 		bReader.close();
 		
 		NaiveBayes nBayes = new NaiveBayes();
 		nBayes.buildClassifier(train);
-				
+					
 		Evaluation eval = new Evaluation(train);
 		eval.crossValidateModel(nBayes, train, 5 , new Random(2));
 		
