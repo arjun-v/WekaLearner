@@ -1,0 +1,6 @@
+[
+	{
+		"OPTIONS" : "-N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c 2",
+		"FILE" : "C:\\Program Files\\Weka-3-7\\data\\weather.arff"
+	}
+]

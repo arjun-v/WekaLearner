@@ -18,6 +18,7 @@ public class BaysianClassifier {
 		train.setClassIndex(train.numAttributes() - 1);
 				
 		bReader.close();
+	
 		
 		NaiveBayes nBayes = new NaiveBayes();
 		nBayes.buildClassifier(train);
