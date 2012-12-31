@@ -1,18 +1,10 @@
 package miningResources;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import sun.misc.IOUtils;
-import weka.associations.Apriori;
-import weka.associations.AssociationRule;
-import weka.associations.AssociationRules;
-import weka.core.Instances;
-import weka.core.Utils;
-
 import AssociationRules.AprioriAssociationRules;
 
 import com.google.gson.Gson;
@@ -23,9 +15,9 @@ import com.google.gson.JsonParser;
 
 public class Miner {
 
-	
+
 	public static void main(String[] args) {
-		
+
 		try {
 
 			InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream("miningResources/config.json");
@@ -45,9 +37,8 @@ public class Miner {
 
 			AprioriAssociationRules apriori = new AprioriAssociationRules();
 			apriori.build(settings.get(0).getFILE(),settings.get(0).getOPTIONS());
-			
-			BufferedReader bReader = new BufferedReader(new FileReader(settings.get(0).getFILE()));
-			
+
+
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
